@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct LoginView: View {
-@State var userEmail = ""
-    @State var password = ""
+    @State var userEmail: String = ""
+    @State var password: String = ""
+    @State var isLoading: Bool = false
+    
     var body: some View {
         VStack {
-            Spacer()
+            
+
+       
+                Spacer()
+    
                  VStack (spacing: 15) {
                      Image("logo")
                          .resizable()
@@ -35,9 +41,24 @@ struct LoginView: View {
                          .foregroundColor(.black.opacity(0.5))
                      }.padding(.trailing, 20)
                      
+                     if isLoading {
+                         LottieView(name: "loader", loopMode: .loop)
+                             .frame(width: 100, height: 100)
+                         Spacer()
+                     }
+                     else
+                     {
                      HStack {
       
-                         Button(action: {}) {
+                         Button(action: {
+                             if !userEmail.isEmpty && !password.isEmpty {
+                                 withAnimation(.spring()) {
+                                     isLoading = true
+                                 }
+                                 onLoginTap()
+                             }
+                             
+                         }) {
                              Text("Login")
                                  .font(.title2)
                          }
@@ -80,17 +101,23 @@ struct LoginView: View {
                              .foregroundColor(.black.opacity(0.5))
                          
                      }
-                     Spacer()
                  }
-                 .frame(height: 550)
+                 }
+                 .frame(height: UIScreen.main.bounds.height - 200)
                  .background(.white)
                  .cornerRadius(20)
-//                 .padding()
+                 
+                 
+            
+            
             
             }
         .background(
             .linearGradient(Gradient(colors: [.red, .white]), startPoint: .top, endPoint: .bottom)
         )
+    }
+    func onLoginTap() {
+    
     }
 }
 

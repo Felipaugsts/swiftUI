@@ -16,6 +16,7 @@
 		C5FB73D927D8F3CD00329D7F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73D827D8F3CD00329D7F /* LoginView.swift */; };
 		C5FB73DE27D8F88F00329D7F /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73DD27D8F88F00329D7F /* UnderLineTextField.swift */; };
 		C5FB73E127D9036300329D7F /* UnderLineSecurityField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73E027D9036300329D7F /* UnderLineSecurityField.swift */; };
+		C5FB73E427D9241200329D7F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73E327D9241200329D7F /* LottieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C5FB73DB27D8F4D000329D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C5FB73DD27D8F88F00329D7F /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		C5FB73E027D9036300329D7F /* UnderLineSecurityField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineSecurityField.swift; sourceTree = "<group>"; };
+		C5FB73E327D9241200329D7F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D8CEDFD4B3F4816E00EDB152 /* Pods_swiftUI_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftUI_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		C5FB73DC27D8F87700329D7F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C5FB73E227D9240100329D7F /* Lottie */,
 				C5FB73DF27D9033C00329D7F /* TextField */,
 			);
 			path = Components;
@@ -142,6 +145,14 @@
 				C5FB73E027D9036300329D7F /* UnderLineSecurityField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		C5FB73E227D9240100329D7F /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB73E327D9241200329D7F /* LottieView.swift */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		D26E2D45B19B86071B870714 /* Frameworks */ = {
@@ -172,6 +183,7 @@
 				C5FB73BD27D8F30E00329D7F /* Sources */,
 				C5FB73BE27D8F30E00329D7F /* Frameworks */,
 				C5FB73BF27D8F30E00329D7F /* Resources */,
+				F2F6D08664CFDD0F518542C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +262,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F2F6D08664CFDD0F518542C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftUI-project/Pods-swiftUI-project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftUI-project/Pods-swiftUI-project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftUI-project/Pods-swiftUI-project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -261,6 +290,7 @@
 				C5FB73DE27D8F88F00329D7F /* UnderLineTextField.swift in Sources */,
 				C5FB73D627D8F3AC00329D7F /* HomePage.swift in Sources */,
 				C5FB73E127D9036300329D7F /* UnderLineSecurityField.swift in Sources */,
+				C5FB73E427D9241200329D7F /* LottieView.swift in Sources */,
 				C5FB73D927D8F3CD00329D7F /* LoginView.swift in Sources */,
 				C5FB73C527D8F30E00329D7F /* swiftUI_projectApp.swift in Sources */,
 			);

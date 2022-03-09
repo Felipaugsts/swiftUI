@@ -6,5 +6,6 @@ target 'swiftUI-project' do
   use_frameworks!
 
   # Pods for swiftUI-project
+  pod 'lottie-ios'
 
 end
