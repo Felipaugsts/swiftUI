@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isUnlocked = false
+    @State private var fireAuth = false
     var body: some View {
         VStack {
-            if isUnlocked {
+            if fireAuth {
+                if isUnlocked {
                 HomePage()
+                } else {
+//
+                }
             } else {
                 LoginView()
             }
