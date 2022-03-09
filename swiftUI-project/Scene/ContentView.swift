@@ -19,10 +19,28 @@ struct ContentView: View {
                 
             
         }
-
+        .onAppear(perform: authenticate)
     }
     
-
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "We need to unlock your data"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                if success {
+                    self.isUnlocked = true
+                }
+                else {
+                    self.isUnlocked = false
+                }
+            }
+        } else {
+            
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
