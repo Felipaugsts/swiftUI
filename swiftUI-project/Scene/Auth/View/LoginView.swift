@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct LoginView: View {
+@State var userEmail = ""
+    @State var password = ""
     var body: some View {
-        Text("Login")
+        VStack {
+    
+                 VStack {
+
+                     ULineTextField(fieldText: "Email", field: $userEmail)
+                     UnderLineSecurityField(field: $password, fieldText: "Password")
+                 }
+                 .padding()
+            }
     }
 }
 

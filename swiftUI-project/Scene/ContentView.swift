@@ -19,7 +19,7 @@ struct ContentView: View {
                 
             
         }
-        .onAppear(perform: authenticate)
+//        .onAppear(perform: authenticate)
     }
     
     func authenticate() {

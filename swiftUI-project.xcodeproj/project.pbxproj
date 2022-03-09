@@ -14,6 +14,8 @@
 		C5FB73CC27D8F31000329D7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FB73CB27D8F31000329D7F /* Preview Assets.xcassets */; };
 		C5FB73D627D8F3AC00329D7F /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73D527D8F3AC00329D7F /* HomePage.swift */; };
 		C5FB73D927D8F3CD00329D7F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73D827D8F3CD00329D7F /* LoginView.swift */; };
+		C5FB73DE27D8F88F00329D7F /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73DD27D8F88F00329D7F /* UnderLineTextField.swift */; };
+		C5FB73E127D9036300329D7F /* UnderLineSecurityField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB73E027D9036300329D7F /* UnderLineSecurityField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		C5FB73D527D8F3AC00329D7F /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		C5FB73D827D8F3CD00329D7F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C5FB73DB27D8F4D000329D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C5FB73DD27D8F88F00329D7F /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
+		C5FB73E027D9036300329D7F /* UnderLineSecurityField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineSecurityField.swift; sourceTree = "<group>"; };
 		D8CEDFD4B3F4816E00EDB152 /* Pods_swiftUI_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftUI_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,6 +67,7 @@
 		C5FB73C327D8F30E00329D7F /* swiftUI-project */ = {
 			isa = PBXGroup;
 			children = (
+				C5FB73DC27D8F87700329D7F /* Components */,
 				C5FB73DB27D8F4D000329D7F /* Info.plist */,
 				C5FB73C427D8F30E00329D7F /* swiftUI_projectApp.swift */,
 				C5FB73D227D8F37D00329D7F /* Scene */,
@@ -120,6 +125,23 @@
 				C5FB73D827D8F3CD00329D7F /* LoginView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C5FB73DC27D8F87700329D7F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB73DF27D9033C00329D7F /* TextField */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C5FB73DF27D9033C00329D7F /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB73DD27D8F88F00329D7F /* UnderLineTextField.swift */,
+				C5FB73E027D9036300329D7F /* UnderLineSecurityField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		D26E2D45B19B86071B870714 /* Frameworks */ = {
@@ -236,7 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FB73C727D8F30E00329D7F /* ContentView.swift in Sources */,
+				C5FB73DE27D8F88F00329D7F /* UnderLineTextField.swift in Sources */,
 				C5FB73D627D8F3AC00329D7F /* HomePage.swift in Sources */,
+				C5FB73E127D9036300329D7F /* UnderLineSecurityField.swift in Sources */,
 				C5FB73D927D8F3CD00329D7F /* LoginView.swift in Sources */,
 				C5FB73C527D8F30E00329D7F /* swiftUI_projectApp.swift in Sources */,
 			);
