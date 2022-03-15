@@ -7,5 +7,10 @@ target 'swiftUI-project' do
 
   # Pods for swiftUI-project
   pod 'lottie-ios'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+  pod 'FirebaseFirestoreSwift', '> 7.0-beta'
+  pod 'Swinject'
 
 end

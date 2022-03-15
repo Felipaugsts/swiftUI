@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomePage: View {
+    @EnvironmentObject var settings: UserSettings
     var body: some View {
-        Text("Home Page")
+        VStack {
+            Text("Home Page")
+            Button(action: {
+                try! Auth.auth().signOut()
+                settings.isLoggedIn = false
+            }){
+                Text("Logout")
+            }
+        }
+        .background(.red)
     }
 }
 

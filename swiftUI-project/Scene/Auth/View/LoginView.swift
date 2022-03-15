@@ -11,12 +11,11 @@ struct LoginView: View {
     @State var userEmail: String = ""
     @State var password: String = ""
     @State var isLoading: Bool = false
+    @EnvironmentObject var settings: UserSettings
     
+    var login: AuthViewModel = FireContainer.shared.resolve(AuthViewModel.self)!
     var body: some View {
         VStack {
-            
-
-       
                 Spacer()
     
                  VStack (spacing: 15) {
@@ -31,7 +30,10 @@ struct LoginView: View {
                      
                      ULineTextField(fieldText: "Email", field: $userEmail)
                          .padding(.bottom, 20)
+                         .disabled(isLoading)
                      UnderLineSecurityField(field: $password, fieldText: "Password")
+                         .disabled(isLoading)
+                     
                      HStack {
                          Spacer()
                      
@@ -54,8 +56,18 @@ struct LoginView: View {
                              if !userEmail.isEmpty && !password.isEmpty {
                                  withAnimation(.spring()) {
                                      isLoading = true
+                                     login.tap(email: userEmail, password: password) {
+                                         result in
+                                         if result == "wrongPassword" {
+                                             print("wrong password")
+                                         } else if result == "200" {
+                                             settings.isLoggedIn = true
+                                         }
+                                             isLoading = false
+                                         
+                                     }
                                  }
-                                 onLoginTap()
+                                 
                              }
                              
                          }) {
@@ -106,18 +118,10 @@ struct LoginView: View {
                  .frame(height: UIScreen.main.bounds.height - 200)
                  .background(.white)
                  .cornerRadius(20)
-                 
-                 
-            
-            
-            
             }
         .background(
             .linearGradient(Gradient(colors: [.red, .white]), startPoint: .top, endPoint: .bottom)
         )
-    }
-    func onLoginTap() {
-    
     }
 }
 

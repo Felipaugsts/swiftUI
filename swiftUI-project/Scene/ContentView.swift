@@ -6,27 +6,36 @@
 //
 import LocalAuthentication
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     @State private var isUnlocked = false
     @State private var fireAuth = false
+    @EnvironmentObject var settings: UserSettings
     var body: some View {
         VStack {
-            if fireAuth {
-                if isUnlocked {
+            if settings.isLoggedIn {
                 HomePage()
-                } else {
-//
-                }
             } else {
                 LoginView()
             }
                 
             
         }
-//        .onAppear(perform: authenticate)
+        .onAppear(perform: isUserAuthenticated)
     }
-    
+    func isUserAuthenticated() {
+        print("settings.isLoggedIn", settings.isLoggedIn)
+        if Auth.auth().currentUser != nil {
+            authenticate()
+            settings.isLoggedIn = true
+            print("logged in ")
+        } else {
+            print(" not logged in ")
+            settings.isLoggedIn = false
+        }
+        print("settings.isLoggedIn", settings.isLoggedIn)
+    }
     func authenticate() {
         let context = LAContext()
         var error: NSError?
